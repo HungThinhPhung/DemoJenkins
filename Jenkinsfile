@@ -4,7 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'ls'
+                sh 'cd /opt/projects/MISA.CvExtraction'
+                sh 'docker-compose build cvextract-hrm'
             }
         }
 
